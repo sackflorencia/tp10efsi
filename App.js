@@ -1,6 +1,7 @@
 import { View, StyleSheet } from "react-native";
 
 import Form from "./components/Form";
+import SafeAreaView, { SafeAreaProvider } from "react-native-safe-area-view";
 
 export default function App() {
   function handleRegistration(data) {
@@ -8,9 +9,11 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Form onSubmit={handleRegistration} />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Form onSubmit={handleRegistration} />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

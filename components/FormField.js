@@ -6,6 +6,7 @@ export default function FormField({
   onChangeText,
   placeholder,
   keyboardType = "default",
+  error,
 }) {
   return (
     <View style={styles.container}>
@@ -18,6 +19,8 @@ export default function FormField({
         placeholder={placeholder}
         keyboardType={keyboardType}
       />
+
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 }
@@ -37,5 +40,10 @@ const styles = StyleSheet.create({
     borderColor: "#999",
     borderRadius: 8,
     padding: 12,
+  },
+
+  error: {
+    marginTop: 4,
+    color: "red",
   },
 });
