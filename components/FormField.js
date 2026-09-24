@@ -26,24 +26,32 @@ export default function FormField({
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 16,
-  },
+    container: {
+        marginBottom: 18,
+    },
 
-  label: {
-    fontSize: 16,
-    marginBottom: 6,
-  },
+    label: {
+        fontSize: 15,
+        fontWeight: "600",
+        color: "#224E6B",
+        marginBottom: 7,
+    },
 
-  input: {
-    borderWidth: 1,
-    borderColor: "#999",
-    borderRadius: 8,
-    padding: 12,
-  },
+    input: {
+        backgroundColor: "white",
+        borderWidth: 1,
+        borderColor: "#45749C",
+        borderRadius: 10,
+        padding: 13,
+        fontSize: 16,
+        backgroundColor: "rgba(225, 255, 255, 0.70)",
+        color: "#224E6B",
+    },
 
-  error: {
-    marginTop: 4,
-    color: "red",
-  },
+    error: {
+        marginTop: 5,
+        color: "#B23A48",
+        fontSize: 13,
+        fontWeight: "500",
+    },
 });
